@@ -1,0 +1,198 @@
+[
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "functions",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "functions",
+        "description": "functions",
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "get_todos",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "write_todos",
+        "importPath": "functions",
+        "description": "functions",
+        "isExtraImport": true,
+        "detail": "functions",
+        "documentation": {}
+    },
+    {
+        "label": "FreeSimpleGUI",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "FreeSimpleGUI",
+        "description": "FreeSimpleGUI",
+        "detail": "FreeSimpleGUI",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "now",
+        "kind": 5,
+        "importPath": "todo_app.cli",
+        "description": "todo_app.cli",
+        "peekOfCode": "now = time.strftime(\"%b %d, %Y %H:%M:%S\")\nprint(\"It is\", now)\nwhile True:\n    user_action = input(\"type add, show, edit, complete or exit: \")\n    user_action = user_action.strip()\n    if user_action.startswith('add'):\n        todo = user_action[4:] + '\\n'  # Add newline\n        todos = get_todos()\n        todos.append(todo)\n        write_todos(todos)",
+        "detail": "todo_app.cli",
+        "documentation": {}
+    },
+    {
+        "label": "label1",
+        "kind": 5,
+        "importPath": "todo_app.compress",
+        "description": "todo_app.compress",
+        "peekOfCode": "label1 = sg.Text(\"Select file to compress\")\ninput_box1 = sg.InputText(tooltip=\"Enter file path\")\nchoose_button1 = sg.FilesBrowse(\"Choose\")\nlabel2 = sg.Text(\"Select file to save compressed data\")\ninput_box2 = sg.InputText(tooltip=\"Enter output file path\")\nchoose_button2 = sg.FilesBrowse(\"Choose\")\ncompress_button = sg.Button(\"Compress\")\nwindow = sg.Window('File Compression Tool', \n                   layout=[[label1, input_box1, choose_button1],\n                            [label2, input_box2, choose_button2],",
+        "detail": "todo_app.compress",
+        "documentation": {}
+    },
+    {
+        "label": "input_box1",
+        "kind": 5,
+        "importPath": "todo_app.compress",
+        "description": "todo_app.compress",
+        "peekOfCode": "input_box1 = sg.InputText(tooltip=\"Enter file path\")\nchoose_button1 = sg.FilesBrowse(\"Choose\")\nlabel2 = sg.Text(\"Select file to save compressed data\")\ninput_box2 = sg.InputText(tooltip=\"Enter output file path\")\nchoose_button2 = sg.FilesBrowse(\"Choose\")\ncompress_button = sg.Button(\"Compress\")\nwindow = sg.Window('File Compression Tool', \n                   layout=[[label1, input_box1, choose_button1],\n                            [label2, input_box2, choose_button2],\n                            [compress_button]])",
+        "detail": "todo_app.compress",
+        "documentation": {}
+    },
+    {
+        "label": "choose_button1",
+        "kind": 5,
+        "importPath": "todo_app.compress",
+        "description": "todo_app.compress",
+        "peekOfCode": "choose_button1 = sg.FilesBrowse(\"Choose\")\nlabel2 = sg.Text(\"Select file to save compressed data\")\ninput_box2 = sg.InputText(tooltip=\"Enter output file path\")\nchoose_button2 = sg.FilesBrowse(\"Choose\")\ncompress_button = sg.Button(\"Compress\")\nwindow = sg.Window('File Compression Tool', \n                   layout=[[label1, input_box1, choose_button1],\n                            [label2, input_box2, choose_button2],\n                            [compress_button]])\nwindow.read()",
+        "detail": "todo_app.compress",
+        "documentation": {}
+    },
+    {
+        "label": "label2",
+        "kind": 5,
+        "importPath": "todo_app.compress",
+        "description": "todo_app.compress",
+        "peekOfCode": "label2 = sg.Text(\"Select file to save compressed data\")\ninput_box2 = sg.InputText(tooltip=\"Enter output file path\")\nchoose_button2 = sg.FilesBrowse(\"Choose\")\ncompress_button = sg.Button(\"Compress\")\nwindow = sg.Window('File Compression Tool', \n                   layout=[[label1, input_box1, choose_button1],\n                            [label2, input_box2, choose_button2],\n                            [compress_button]])\nwindow.read()\nwindow.close()",
+        "detail": "todo_app.compress",
+        "documentation": {}
+    },
+    {
+        "label": "input_box2",
+        "kind": 5,
+        "importPath": "todo_app.compress",
+        "description": "todo_app.compress",
+        "peekOfCode": "input_box2 = sg.InputText(tooltip=\"Enter output file path\")\nchoose_button2 = sg.FilesBrowse(\"Choose\")\ncompress_button = sg.Button(\"Compress\")\nwindow = sg.Window('File Compression Tool', \n                   layout=[[label1, input_box1, choose_button1],\n                            [label2, input_box2, choose_button2],\n                            [compress_button]])\nwindow.read()\nwindow.close()",
+        "detail": "todo_app.compress",
+        "documentation": {}
+    },
+    {
+        "label": "choose_button2",
+        "kind": 5,
+        "importPath": "todo_app.compress",
+        "description": "todo_app.compress",
+        "peekOfCode": "choose_button2 = sg.FilesBrowse(\"Choose\")\ncompress_button = sg.Button(\"Compress\")\nwindow = sg.Window('File Compression Tool', \n                   layout=[[label1, input_box1, choose_button1],\n                            [label2, input_box2, choose_button2],\n                            [compress_button]])\nwindow.read()\nwindow.close()",
+        "detail": "todo_app.compress",
+        "documentation": {}
+    },
+    {
+        "label": "compress_button",
+        "kind": 5,
+        "importPath": "todo_app.compress",
+        "description": "todo_app.compress",
+        "peekOfCode": "compress_button = sg.Button(\"Compress\")\nwindow = sg.Window('File Compression Tool', \n                   layout=[[label1, input_box1, choose_button1],\n                            [label2, input_box2, choose_button2],\n                            [compress_button]])\nwindow.read()\nwindow.close()",
+        "detail": "todo_app.compress",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "todo_app.compress",
+        "description": "todo_app.compress",
+        "peekOfCode": "window = sg.Window('File Compression Tool', \n                   layout=[[label1, input_box1, choose_button1],\n                            [label2, input_box2, choose_button2],\n                            [compress_button]])\nwindow.read()\nwindow.close()",
+        "detail": "todo_app.compress",
+        "documentation": {}
+    },
+    {
+        "label": "get_todos",
+        "kind": 2,
+        "importPath": "todo_app.functions",
+        "description": "todo_app.functions",
+        "peekOfCode": "def get_todos(filepath=FILEPATH):\n    \"\"\"\n    Reads a text file and returns the list of to-do items.\n    Args:\n        filepath (str): The path to the text file containing to-do items.\n    Returns:\n        list: A list of to-do items read from the file.\n    \"\"\"\n    with open(filepath, 'r') as file_local:\n            todos_local = file_local.readlines()",
+        "detail": "todo_app.functions",
+        "documentation": {}
+    },
+    {
+        "label": "write_todos",
+        "kind": 2,
+        "importPath": "todo_app.functions",
+        "description": "todo_app.functions",
+        "peekOfCode": "def write_todos(todos_arg, filepath=FILEPATH):\n    \"\"\"\n    Writes the list of to-do items to a text file.\n    Args:\n        todos_arg (list): The list of to-do items to write to the file.\n        filepath (str): The path to the text file where to-do items will be written.\n    \"\"\"\n    with open(filepath, 'w') as file:\n        file.writelines(todos_arg)\nif __name__ == \"__main__\":",
+        "detail": "todo_app.functions",
+        "documentation": {}
+    },
+    {
+        "label": "FILEPATH",
+        "kind": 5,
+        "importPath": "todo_app.functions",
+        "description": "todo_app.functions",
+        "peekOfCode": "FILEPATH = 'todos.txt'\ndef get_todos(filepath=FILEPATH):\n    \"\"\"\n    Reads a text file and returns the list of to-do items.\n    Args:\n        filepath (str): The path to the text file containing to-do items.\n    Returns:\n        list: A list of to-do items read from the file.\n    \"\"\"\n    with open(filepath, 'r') as file_local:",
+        "detail": "todo_app.functions",
+        "documentation": {}
+    },
+    {
+        "label": "label",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "label = sg.Text(\"Type in a to-do\")\ninput_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(\"Add\")\nwindow = sg.Window('My To-Do App', \n                   layout=[[label], [input_box, add_button]],\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "input_box",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "input_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(\"Add\")\nwindow = sg.Window('My To-Do App', \n                   layout=[[label], [input_box, add_button]],\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:\n        case \"Add\":",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "add_button",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "add_button = sg.Button(\"Add\")\nwindow = sg.Window('My To-Do App', \n                   layout=[[label], [input_box, add_button]],\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:\n        case \"Add\":\n            todo = functions.get_todos()",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "window = sg.Window('My To-Do App', \n                   layout=[[label], [input_box, add_button]],\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:\n        case \"Add\":\n            todo = functions.get_todos()\n            todo.append(values['todo'] + '\\n')",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    }
+]

@@ -52,6 +52,24 @@
         "documentation": {}
     },
     {
+        "label": "zipfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "zipfile",
+        "description": "zipfile",
+        "detail": "zipfile",
+        "documentation": {}
+    },
+    {
+        "label": "pathlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
         "label": "now",
         "kind": 5,
         "importPath": "todo_app.cli",
@@ -164,7 +182,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "label = sg.Text(\"Type in a to-do\")\ninput_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(\"Add\")\nwindow = sg.Window('My To-Do App', \n                   layout=[[label], [input_box, add_button]],\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:",
+        "peekOfCode": "label = sg.Text(\"Type in a to-do\")\ninput_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(\"Add\")\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -173,7 +191,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "input_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(\"Add\")\nwindow = sg.Window('My To-Do App', \n                   layout=[[label], [input_box, add_button]],\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:\n        case \"Add\":",
+        "peekOfCode": "input_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(\"Add\")\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -182,7 +200,52 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "add_button = sg.Button(\"Add\")\nwindow = sg.Window('My To-Do App', \n                   layout=[[label], [input_box, add_button]],\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:\n        case \"Add\":\n            todo = functions.get_todos()",
+        "peekOfCode": "add_button = sg.Button(\"Add\")\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', ",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "list_box",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "list_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "edit_button",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "edit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "complete_button",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "complete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "exit_button",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "exit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "layout",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "layout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -191,8 +254,17 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "window = sg.Window('My To-Do App', \n                   layout=[[label], [input_box, add_button]],\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:\n        case \"Add\":\n            todo = functions.get_todos()\n            todo.append(values['todo'] + '\\n')",
+        "peekOfCode": "window = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:\n        case \"Add\":\n            todo = functions.get_todos()\n            todo.append(values['todo'] + '\\n')",
         "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
+        "label": "make_archive",
+        "kind": 2,
+        "importPath": "todo_app.zip_creator",
+        "description": "todo_app.zip_creator",
+        "peekOfCode": "def make_archive(filepaths, dest_dir):\n    \"\"\"\n    Creates a zip archive named 'compressed.zip' in the specified destination directory,\n    containing the provided file paths (relative to this script's location).\n    \"\"\"\n    # Path to the current script\n    base_path = pathlib.Path(__file__).parent\n    # Ensure destination directory exists\n    dest_path = base_path / dest_dir\n    dest_path.mkdir(parents=True, exist_ok=True)",
+        "detail": "todo_app.zip_creator",
         "documentation": {}
     }
 ]

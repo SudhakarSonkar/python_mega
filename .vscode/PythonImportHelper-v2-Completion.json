@@ -70,6 +70,23 @@
         "documentation": {}
     },
     {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "functions",
+        "importPath": "todo_app",
+        "description": "todo_app",
+        "isExtraImport": true,
+        "detail": "todo_app",
+        "documentation": {}
+    },
+    {
         "label": "now",
         "kind": 5,
         "importPath": "todo_app.cli",
@@ -178,11 +195,20 @@
         "documentation": {}
     },
     {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "todo_app.gui",
+        "description": "todo_app.gui",
+        "peekOfCode": "clock = sg.Text('', key='clock')\nlabel = sg.Text(\"Type in a to-do\")\ninput_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(tooltip='Add todo', key='Add')\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[clock], \n          [label], ",
+        "detail": "todo_app.gui",
+        "documentation": {}
+    },
+    {
         "label": "label",
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "label = sg.Text(\"Type in a to-do\")\ninput_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(\"Add\")\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],",
+        "peekOfCode": "label = sg.Text(\"Type in a to-do\")\ninput_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(tooltip='Add todo', key='Add')\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[clock], \n          [label], \n          [input_box, add_button], ",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -191,7 +217,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "input_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(\"Add\")\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]",
+        "peekOfCode": "input_box = sg.InputText(tooltip=\"Enter to-do\", key='todo')\nadd_button = sg.Button(tooltip='Add todo', key='Add')\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[clock], \n          [label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -200,7 +226,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "add_button = sg.Button(\"Add\")\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', ",
+        "peekOfCode": "add_button = sg.Button(tooltip='Add todo', key='Add')\nlist_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[clock], \n          [label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -209,7 +235,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "list_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,",
+        "peekOfCode": "list_box = sg.Listbox(values=functions.get_todos(), key='todos', enable_events=True, size=[45, 10])\nedit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[clock], \n          [label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', ",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -218,7 +244,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "edit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))",
+        "peekOfCode": "edit_button = sg.Button(\"Edit\")\ncomplete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[clock], \n          [label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -227,7 +253,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "complete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:",
+        "peekOfCode": "complete_button = sg.Button(\"Complete\")\nexit_button = sg.Button(\"Exit\")\nlayout = [[clock], \n          [label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -236,7 +262,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "exit_button = sg.Button(\"Exit\")\nlayout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()",
+        "peekOfCode": "exit_button = sg.Button(\"Exit\")\nlayout = [[clock], \n          [label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -245,7 +271,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "layout = [[label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)",
+        "peekOfCode": "layout = [[clock], \n          [label], \n          [input_box, add_button], \n          [list_box, edit_button, complete_button],\n          [exit_button]]\nwindow = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read(timeout=200)  # Update every secon",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -254,7 +280,7 @@
         "kind": 5,
         "importPath": "todo_app.gui",
         "description": "todo_app.gui",
-        "peekOfCode": "window = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read()\n    print(event, values)\n    match event:\n        case \"Add\":\n            todo = functions.get_todos()\n            todo.append(values['todo'] + '\\n')",
+        "peekOfCode": "window = sg.Window('My To-Do App', \n                   layout=layout,\n                   font=(\"Helvetica\", 20))\nwhile True:\n    event, values = window.read(timeout=200)  # Update every secon\n    window['clock'].update(value=time.strftime('%b %d, %Y %H:%M:%S'))\n    match event:\n        case \"Add\":\n            todo = functions.get_todos()\n            todo.append(values['todo'] + '\\n')",
         "detail": "todo_app.gui",
         "documentation": {}
     },
@@ -265,6 +291,114 @@
         "description": "todo_app.zip_creator",
         "peekOfCode": "def make_archive(filepaths, dest_dir):\n    \"\"\"\n    Creates a zip archive named 'compressed.zip' in the specified destination directory,\n    containing the provided file paths (relative to this script's location).\n    \"\"\"\n    # Path to the current script\n    base_path = pathlib.Path(__file__).parent\n    # Ensure destination directory exists\n    dest_path = base_path / dest_dir\n    dest_path.mkdir(parents=True, exist_ok=True)",
         "detail": "todo_app.zip_creator",
+        "documentation": {}
+    },
+    {
+        "label": "label1",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "label1 = sg.Text(\"Select archive file:\")\ninput1 = sg.Input()\ncloose_button = sg.FileBrowse(\"Browse\", key='archive_file')\nlabel2 = sg.Text(\"Select dest dir:\")\ninput2 = sg.Input()\ncloose_button = sg.FolderBrowse(\"Choose\", key='folder')\nextract_button = sg.Button(\"Extract\", key='extract')\noutput_label = sg.Text(key='output', text_color='green')\nwindow = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "input1",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "input1 = sg.Input()\ncloose_button = sg.FileBrowse(\"Browse\", key='archive_file')\nlabel2 = sg.Text(\"Select dest dir:\")\ninput2 = sg.Input()\ncloose_button = sg.FolderBrowse(\"Choose\", key='folder')\nextract_button = sg.Button(\"Extract\", key='extract')\noutput_label = sg.Text(key='output', text_color='green')\nwindow = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],\n                            [label2, input2, cloose_button],",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "cloose_button",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "cloose_button = sg.FileBrowse(\"Browse\", key='archive_file')\nlabel2 = sg.Text(\"Select dest dir:\")\ninput2 = sg.Input()\ncloose_button = sg.FolderBrowse(\"Choose\", key='folder')\nextract_button = sg.Button(\"Extract\", key='extract')\noutput_label = sg.Text(key='output', text_color='green')\nwindow = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],\n                            [label2, input2, cloose_button],\n                            [extract_button, output_label]])",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "label2",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "label2 = sg.Text(\"Select dest dir:\")\ninput2 = sg.Input()\ncloose_button = sg.FolderBrowse(\"Choose\", key='folder')\nextract_button = sg.Button(\"Extract\", key='extract')\noutput_label = sg.Text(key='output', text_color='green')\nwindow = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],\n                            [label2, input2, cloose_button],\n                            [extract_button, output_label]])\nwindow.read()",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "input2",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "input2 = sg.Input()\ncloose_button = sg.FolderBrowse(\"Choose\", key='folder')\nextract_button = sg.Button(\"Extract\", key='extract')\noutput_label = sg.Text(key='output', text_color='green')\nwindow = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],\n                            [label2, input2, cloose_button],\n                            [extract_button, output_label]])\nwindow.read()\nwindow.close()",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "cloose_button",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "cloose_button = sg.FolderBrowse(\"Choose\", key='folder')\nextract_button = sg.Button(\"Extract\", key='extract')\noutput_label = sg.Text(key='output', text_color='green')\nwindow = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],\n                            [label2, input2, cloose_button],\n                            [extract_button, output_label]])\nwindow.read()\nwindow.close()",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "extract_button",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "extract_button = sg.Button(\"Extract\", key='extract')\noutput_label = sg.Text(key='output', text_color='green')\nwindow = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],\n                            [label2, input2, cloose_button],\n                            [extract_button, output_label]])\nwindow.read()\nwindow.close()",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "output_label",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "output_label = sg.Text(key='output', text_color='green')\nwindow = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],\n                            [label2, input2, cloose_button],\n                            [extract_button, output_label]])\nwindow.read()\nwindow.close()",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "archive",
+        "description": "archive",
+        "peekOfCode": "window = sg.Window(\"Archive Extractor\",\n                   layout=[[label1, input1, cloose_button],\n                            [label2, input2, cloose_button],\n                            [extract_button, output_label]])\nwindow.read()\nwindow.close()",
+        "detail": "archive",
+        "documentation": {}
+    },
+    {
+        "label": "add_todo",
+        "kind": 2,
+        "importPath": "web",
+        "description": "web",
+        "peekOfCode": "def add_todo():\n    todo = st.session_state['new_todo'] + '\\n'\n    todos.append(todo)\n    functions.write_todos(todos)\nst.title(\"My Todo App\")\nst.subheader(\"This is my todo app.\")\nst.write(\"This app is to increase your productivity.\")\nfor index, todo in enumerate(todos):\n    checkbox = st.checkbox(todo, key=f\"todo_{index}\")  # Use a unique key for each checkbox\n    if checkbox:",
+        "detail": "web",
+        "documentation": {}
+    },
+    {
+        "label": "todos",
+        "kind": 5,
+        "importPath": "web",
+        "description": "web",
+        "peekOfCode": "todos = functions.get_todos()\ndef add_todo():\n    todo = st.session_state['new_todo'] + '\\n'\n    todos.append(todo)\n    functions.write_todos(todos)\nst.title(\"My Todo App\")\nst.subheader(\"This is my todo app.\")\nst.write(\"This app is to increase your productivity.\")\nfor index, todo in enumerate(todos):\n    checkbox = st.checkbox(todo, key=f\"todo_{index}\")  # Use a unique key for each checkbox",
+        "detail": "web",
+        "documentation": {}
+    },
+    {
+        "label": "extract_archive",
+        "kind": 2,
+        "importPath": "zip_extractor",
+        "description": "zip_extractor",
+        "peekOfCode": "def extract_archive(archive_path, dest_dir):\n    \"\"\"\n    Extracts the contents of a zip archive to the specified destination directory.\n    :param archive_path: Path to the zip archive file.\n    :param dest_dir: Directory where the contents should be extracted.\n    \"\"\"\n    try:\n        with zipfile.ZipFile(archive_path, 'r') as zip_ref:\n            zip_ref.extractall(dest_dir)\n        print(f\"Extraction complete: {archive_path} to {dest_dir}\")",
+        "detail": "zip_extractor",
         "documentation": {}
     }
 ]
